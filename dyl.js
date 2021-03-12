@@ -1,8 +1,8 @@
 // Design Thinking Books
-function loadBAbooks(){
-    let shelf = document.querySelector("#designThinkingList");
+function loadDTbooks(){
+    let shelf1 = document.querySelector("#designThinkingList");
     for(let i = 0; i < DTbooks.length; i++) {
-        shelf.innerHTML += `<div class="card" style="width: 18rem;">
+        shelf1.innerHTML += `<div class="card" style="width: 18rem;">
                                 <img src="${DTbooks[i].img}" class="card-img-top" alt="${DTbooks[i].title}">
                                 <div class="card-body">
                                     <h5 class="card-title">${DTbooks[i].title}</h5>
@@ -19,145 +19,156 @@ function loadBAbooks(){
 let DTbooks = [
     {
         "img" : "dyl/DT1.jpg",
-        "title" : "The Analytics Edge",
-        "text" : "Dimitris Bertsimas, Allison O'Hair, William Pulleyblank, 2016",
-        "link" : "https://www.amazon.com/Analytics-Edge-Dimitris-Bertsimas/dp/098991089X/",
+        "title" : "Design Thinking",
+        "text" : "Thomas Lockwood, 2009",
+        "link" : "https://www.amazon.com/dp/1581156685/",
         "status" : "toRead"
     },
 
     {
         "img" : "dyl/DT2.jpg",
-        "title" : "The Analytics Edge",
-        "text" : "Dimitris Bertsimas, Allison O'Hair, William Pulleyblank, 2016",
-        "link" : "https://www.amazon.com/Analytics-Edge-Dimitris-Bertsimas/dp/098991089X/",
+        "title" : "The Art of Innovation",
+        "text" : "Tom Kelley, 2001",
+        "link" : "https://www.amazon.com/Art-Innovation-Lessons-Creativity-Americas-dp-1781256144/dp/1781256144/",
         "status" : "toRead"
     },
 
     {
         "img" : "dyl/DT3.jpg",
-        "title" : "The Analytics Edge",
-        "text" : "Dimitris Bertsimas, Allison O'Hair, William Pulleyblank, 2016",
-        "link" : "https://www.amazon.com/Analytics-Edge-Dimitris-Bertsimas/dp/098991089X/",
+        "title" : "Creative Confidence",
+        "text" : "Tom Kelley & David Kelley, 2015",
+        "link" : "https://www.amazon.com/dp/0008139385//",
         "status" : "toRead"
     },
 
     {
         "img" : "dyl/DT4.jpg",
-        "title" : "The Analytics Edge",
-        "text" : "Dimitris Bertsimas, Allison O'Hair, William Pulleyblank, 2016",
-        "link" : "https://www.amazon.com/Analytics-Edge-Dimitris-Bertsimas/dp/098991089X/",
+        "title" : "The Field Guide to Human-Centered Design",
+        "text" : "IDEO.org, 2015",
+        "link" : "https://www.amazon.com/dp/0991406311/",
         "status" : "toRead"
     },
 
     {
         "img" : "dyl/DT5.jpg",
-        "title" : "The Analytics Edge",
-        "text" : "Dimitris Bertsimas, Allison O'Hair, William Pulleyblank, 2016",
-        "link" : "https://www.amazon.com/Analytics-Edge-Dimitris-Bertsimas/dp/098991089X/",
+        "title" : "Designing Your Life",
+        "text" : "Bill Burnett 2016",
+        "link" : "https://www.amazon.com/Designing-Your-Life-Well-Lived-Joyful/dp/1101875321/",
         "status" : "toRead"
     },
 
     {
         "img" : "dyl/DT6.jpg",
-        "title" : "The Analytics Edge",
-        "text" : "Dimitris Bertsimas, Allison O'Hair, William Pulleyblank, 2016",
-        "link" : "https://www.amazon.com/Analytics-Edge-Dimitris-Bertsimas/dp/098991089X/",
+        "title" : "HBR's 10 Must Reads on Design Thinking",
+        "text" : "Harvard Business Review, 2020",
+        "link" : "https://www.amazon.com/Reads-Design-Thinking-featured-Brown/dp/1633698807/",
         "status" : "toRead"
     },
 ]
 
-// Strategy Books function
-function loadSbooks (){
-    let shelf = document.querySelector("#strategyList");
-    for(let i = 0; i < Sbooks.length; i++) {
-        shelf.innerHTML += `<div class="card" style="width: 18rem;">
-                                <img src="${Sbooks[i].img}" class="card-img-top" alt="${Sbooks[i].title}">
+// Personal Leadership function
+function loadPLbooks (){
+    let shelf2 = document.querySelector("#personalLeadershipList");
+    for(let i = 0; i < PLbooks.length; i++) {
+        shelf2.innerHTML += `<div class="card" style="width: 18rem;">
+                                <img src="${PLbooks[i].img}" class="card-img-top" alt="${PLbooks[i].title}">
                                 <div class="card-body">
-                                    <h5 class="card-title">${Sbooks[i].title}</h5>
-                                    <p class="card-text">${Sbooks[i].text}</p>
-                                    <a href="${Sbooks[i].link}" class="btn btn-primary">Buy it</a>
-                                    <span class="${Sbooks[i].status}"></span>
+                                    <h5 class="card-title">${PLbooks[i].title}</h5>
+                                    <p class="card-text">${PLbooks[i].text}</p>
+                                    <a href="${PLbooks[i].link}" class="btn btn-primary">Buy it</a>
+                                    <span class="${PLbooks[i].status}"></span>
                                 </div>
                             </div>`
     }
 };
 
-let Sbooks = [
+let PLbooks = [
     {
-        "img" : "core/S1core.jpg",
-        "title" : "The Content Trap",
-        "text" : "Bharat Anand, 2016",
-        "link" : "https://www.amazon.com/Content-Trap-Strategists-Digital-Change/dp/0812995384/",
-        "status" : "read"
-    },
-
-    {
-        "img" : "core/S2core.jpg",
-        "title" : "Trust",
-        "text" : "Tarun Khanna, 2018",
-        "link" : "https://www.amazon.com/Trust-Tarun-Khanna-audiobook/dp/B07DP4M5FC/",
-        "status" : "read"
-    },
-
-    {
-        "img" : "core/S3core.jpg",
-        "title" : "Reimagining Capitalism in a World on Fire",
-        "text" : "Rebecca Henderson, 2020",
-        "link" : "https://www.amazon.com/Reimagining-Capitalism-World-Rebecca-Henderson/dp/1541730151/",
+        "img" : "dyl/PL1.jpg",
+        "title" : "Radical Candor",
+        "text" : "Kim Scott, 2019",
+        "link" : "https://www.amazon.com/Radical-Candor-Revised-Kick-Ass-Humanity/dp/1250235375/",
         "status" : "toRead"
     },
+
 ]
 
-// Finance Books function
-function loadFbooks (){
-    let shelf = document.querySelector("#financeList");
-    for(let i = 0; i < Fbooks.length; i++) {
-        shelf.innerHTML += `<div class="card" style="width: 18rem;">
-                                <img src="${Fbooks[i].img}" class="card-img-top" alt="${Fbooks[i].title}">
+// Negotiation Books function
+function loadNbooks (){
+    let shelf3 = document.querySelector("#negotiationList");
+    for(let i = 0; i < Nbooks.length; i++) {
+        shelf3.innerHTML += `<div class="card" style="width: 18rem;">
+                                <img src="${Nbooks[i].img}" class="card-img-top" alt="${Nbooks[i].title}">
                                 <div class="card-body">
-                                    <h5 class="card-title">${Fbooks[i].title}</h5>
-                                    <p class="card-text">${Fbooks[i].text}</p>
-                                    <a href="${Fbooks[i].link}" class="btn btn-primary">Buy it</a>
-                                    <span class="${Fbooks[i].status}"></span>
+                                    <h5 class="card-title">${Nbooks[i].title}</h5>
+                                    <p class="card-text">${Nbooks[i].text}</p>
+                                    <a href="${Nbooks[i].link}" class="btn btn-primary">Buy it</a>
+                                    <span class="${Nbooks[i].status}"></span>
                                 </div>
                             </div>`
     }
 };
 
-let Fbooks = [
+let Nbooks = [
     {
-        "img" : "core/F1core.jpg",
-        "title" : "An Easy Introduction to Financial Accounting",
-        "text" : "V.G. Narayanan, 2019",
-        "link" : "https://www.amazon.com/Easy-Introduction-Financial-Accounting-Self-Study-dp-0997893621/dp/0997893621/",
+        "img" : "dyl/N1.jpg",
+        "title" : "Rebel Talent",
+        "text" : "Francesca Gino, 2019",
+        "link" : "https://www.amazon.com/gp/product/1509860630/",
         "status" : "toRead"
-    },
-
-    {
-        "img" : "core/F2core.jpg",
-        "title" : "The Wisdom of Finance",
-        "text" : "Mihir A. Desai, 2017",
-        "link" : "https://www.amazon.com/Wisdom-Finance-Discovering-Humanity-Return/dp/054491113X/",
-        "status" : "toRead"
-    },
-
-    {
-        "img" : "core/F3core.jpg",
-        "title" : "How Finance Works",
-        "text" : "Mihir A. Desai, 2019",
-        "link" : "https://www.amazon.com/How-Finance-Works-Thinking-Numbers/dp/1633696707/",
-        "status" : "toRead"
-    },
+    },   
 ]
 
+// JTBD Books function
+function loadJTBDbooks (){
+    let shelf4 = document.querySelector("#JTBDList");
+    for(let i = 0; i < JTBDbooks.length; i++) {
+        shelf4.innerHTML += `<div class="card" style="width: 18rem;">
+                                <img src="${JTBDbooks[i].img}" class="card-img-top" alt="${JTBDbooks[i].title}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${JTBDbooks[i].title}</h5>
+                                    <p class="card-text">${JTBDbooks[i].text}</p>
+                                    <a href="${JTBDbooks[i].link}" class="btn btn-primary">Buy it</a>
+                                    <span class="${JTBDbooks[i].status}"></span>
+                                </div>
+                            </div>`
+    }
+};
 
+let JTBDbooks = [
+    {
+        "img" : "jtbd/Jtbd1.jpg",
+        "title" : "The Jobs-to-be-Done Handbook",
+        "text" : "Bob Moesta & Chris Spiek, 2014",
+        "link" : "https://www.amazon.com/Jobs-be-Done-Handbook-techniques-application/dp/1499339232/",
+        "status" : "toRead"
+    },    
+
+    {
+        "img" : "jtbd/Jtbd2.jpg",
+        "title" : "Choosing College",
+        "text" : "Bob Moesta & Michael B. Horn, 2019",
+        "link" : "https://www.amazon.com/gp/product/B07WS8F696/",
+        "status" : "toRead"
+    },    
+
+    {
+        "img" : "jtbd/Jtbd3.jpg",
+        "title" : "Demand-Side Sales 101",
+        "text" : "Bob Moesta, 2020",
+        "link" : "https://www.amazon.com/gp/product/B08FRRF68Q/",
+        "status" : "toRead"
+    },    
+]
 
 // Calling the functions
-document.addEventListener("DOMContentLoaded",loadBAbooks);
+document.addEventListener("DOMContentLoaded",loadDTbooks);
 
-document.addEventListener("DOMContentLoaded",loadSbooks);
+document.addEventListener("DOMContentLoaded",loadPLbooks);
 
-document.addEventListener("DOMContentLoaded",loadFbooks);
+document.addEventListener("DOMContentLoaded",loadNbooks);
+
+document.addEventListener("DOMContentLoaded",loadJTBDbooks);
 
 document.addEventListener("DOMContentLoaded", function(){
     let x = document.querySelectorAll(".read")
