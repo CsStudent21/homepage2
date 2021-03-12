@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function(){
+            let x = document.querySelectorAll(".read")
+            for(let i = 0; i < x.length; i++ ){
+              x[i].innerHTML = `<button type="button" class="btn btn-success">Read</button>`
+            }
+          });
+        </script>
+
+        <title>Clayton Christensen's Books</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img id = "logo" src="Bluelogo.jpg" width="30" height="30" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="ccbooks.html">Clayton Christensen's Books</a>
+            <a class="nav-item nav-link" href="core.html">CORe</a>
+            <a class="nav-item nav-link" href="restaurant.html"> My Restaurant</a>
+          </div>
+        </div>
+      </nav>
+
+     <!-- Breadcrumb  -->
+     <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Clayton Christensen's Books</li>
+        </ol>
+      </nav>
+
+    <!--Title of the Page-->
+    <h1><span class="badge badge-primary">Clayton Christensen</span></h1>
+
+     <!--Books Area -->
+      <div class = "container">
+        <!--Essential Category-->
+        <h2><span class="badge badge-secondary">Essentials</span></h2>
+        <div class= "row row-col-4">
+
+          <div class="card" style="width: 18rem;">
+            <img src="ccbooks/cc001.jpg" class="card-img-top" alt="The Innovator's Dilemma">
+            <div class="card-body">
+              <h5 class="card-title">The Innovator's Dilemma </h5>
+              <p class="card-text">Clayton M. Christensen, 1997</p>
+              <a href="https://www.amazon.com/Innovators-Dilemma-Technologies-Management-Innovation/dp/142219602X/" class="btn btn-primary">Buy it</a>
+              <span class="read"></span>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="ccbooks/cc002.jpg" class="card-img-top" alt="The Innovator's Solution">
+            <div class="card-body">
+              <h5 class="card-title">The Innovator's Solution </h5>
+              <p class="card-text">Clayton M. Christensen, 2003</p>
+              <a href="https://www.amazon.com/Innovators-Solution-Creating-Sustaining-Successful/dp/1422196577/" class="btn btn-primary">Buy it</a>
+              <span class="read"></span>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="ccbooks/cc003.jpg" class="card-img-top" alt="How Will You Measure Your Life?">
+            <div class="card-body">
+              <h5 class="card-title">How Will You Measure Your Life?</h5>
+              <p class="card-text">Clayton M. Christensen, 2012</p>
+              <a href="https://www.amazon.com/How-Will-Measure-Your-Life/dp/0062102419/" class="btn btn-primary">Buy it</a>
+              <span class="read"></span>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="ccbooks/cc004.jpg" class="card-img-top" alt="Competing Against Luck?">
+            <div class="card-body">
+              <h5 class="card-title">Competing Against Luck?</h5>
+              <p class="card-text">Clayton M. Christensen, 2016</p>
+              <a href="https://www.amazon.com/Competing-Against-Luck-Innovation-Customer-ebook/dp/B01BBPZIHM/" class="btn btn-primary">Buy it</a>
+              <span class=""></span>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="ccbooks/cc005.jpg" class="card-img-top" alt="The Prosperity Paradox">
+            <div class="card-body">
+              <h5 class="card-title">The Prosperity Paradox</h5>
+              <p class="card-text">Clayton M. Christensen, 2019</p>
+              <a href="https://www.amazon.com/Prosperity-Paradox-Innovation-Nations-Poverty/dp/0062946730/" class="btn btn-primary">Buy it</a>
+              <span class=""></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!--Others Category -->
+        <h2><span class="badge badge-secondary">Others</span></h2>
+        <div class= "row row-col-4">
+          <div class="card" style="width: 18rem;">
+            <img src="ccbooks/cc006.jpg" class="card-img-top" alt="Innovation and the General Manager">
+            <div class="card-body">
+              <h5 class="card-title">Innovation and the General Manager</h5>
+              <p class="card-text">Clayton M. Christensen, 2003</p>
+              <a href="https://www.amazon.com/Innovation-General-Manager-Clayton-Christensen/dp/0073659150/" class="btn btn-primary">Buy it</a>
+              <span class=""></span>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="ccbooks/cc007.jpg" class="card-img-top" alt="Seeing What's Next">
+            <div class="card-body">
+              <h5 class="card-title">Seeing What's Next</h5>
+              <p class="card-text">Clayton M. Christensen, 2004</p>
+              <a href="https://www.amazon.com/Seeing-Whats-Next-Theories-Innovation/dp/1591391857" class="btn btn-primary">Buy it</a>
+              <span class=""></span>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="ccbooks/cc008.jpg" class="card-img-top" alt="Disrupting Class">
+            <div class="card-body">
+              <h5 class="card-title">Disrupting Class</h5>
+              <p class="card-text">Clayton M. Christensen, 2008</p>
+              <a href="https://www.amazon.com/Disrupting-Class-Disruptive-Innovation-Change/dp/0071592067/" class="btn btn-primary">Buy it</a>
+              <span class=""></span>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="ccbooks/cc009.jpg" class="card-img-top" alt="The innovator's prescription">
+            <div class="card-body">
+              <h5 class="card-title">The innovator's prescription</h5>
+              <p class="card-text">Clayton M. Christensen, 2008</p>
+              <a href="https://www.amazon.com/Innovators-Prescription-Disruptive-Solution-Health/dp/1259860868/" class="btn btn-primary">Buy it</a>
+              <span class=""></span>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="ccbooks/cc010.jpg" class="card-img-top" alt="The Innovative University">
+            <div class="card-body">
+              <h5 class="card-title">The Innovative University</h5>
+              <p class="card-text">Clayton M. Christensen, 2011</p>
+              <a href="https://www.amazon.com/Innovative-University-Changing-Higher-Education/dp/1118063481/" class="btn btn-primary">Buy it</a>
+              <span class=""></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </body>
+</html>

@@ -1,0 +1,37 @@
+#logo {
+    border-radius: 50px;
+  }
+
+  h2 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  
+
+  /* Style of the Cards Book */
+
+.card {
+  margin: 10px;
+  padding: 5px;
+  border-style:none;
+}
+
+.card-img-top {
+  height: 380px;
+  padding: 10px;
+}
+
+
+.card-body {
+  border-bottom: 4px dotted lightsteelblue;
+}
+
+/*
+.card-title {
+
+}
+
+.card-text {
+
+}
+*/
