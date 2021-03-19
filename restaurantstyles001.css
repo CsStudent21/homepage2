@@ -1,0 +1,42 @@
+#logo {
+  border-radius: 50px;
+}
+
+body {
+    background-color: white;
+  }
+
+nav {
+    background-color: white;
+  }
+
+.jumbotron {
+    background-color: white;
+  }
+
+.d-block.w-100 {
+    width: auto;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  /* Table Style found on https://css-tricks.com/complete-guide-table-element/ */
+
+  td, th {
+    width: 4rem;
+    height: 2rem;
+    border: 0px;
+    padding:1rem;
+  }
+  th {
+    background: lightblue;
+    border-color: white;
+    text-align: center;
+  }
+
+  /* Cancel Reservation Form */
+  #cancelform {
+    padding:1rem;
+    border:1px;
+    margin:1rem;
+  }

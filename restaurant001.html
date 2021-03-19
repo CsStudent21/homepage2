@@ -8,7 +8,23 @@
     <link href="restaurantstyles.css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <script src="restaurant.js"></script>
+    <script src="restaurant001.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", Delete);
+    function Delete(){
+      document.querySelector(".answer").addEventListener("click", function(){
+                    if(document.querySelector(".risposta").value === "Pepe in Grani"){
+                        document.querySelector("#pizzeria").innerHTML = "Correct!";
+                        document.querySelector(".risposta").style.backgroundColor = "green";
+                    }
+                    else {
+                        document.querySelector("#pizzeria").innerHTML = "Incorrect!";
+                        document.querySelector(".risposta").style.backgroundColor = "red";
+                    }
+            });
+    }
+    </script>
 
     <title>My restaurant</title>
   </head>
@@ -162,10 +178,10 @@
      </div>
 
      <!--Form to Cancel Reservation-->
-      <form id="cancelform" onsubmit="return false;">
-        <input type="text" id="idbook" placeholder="Insert ID Reservation">
-        <input id="cancelbook" type="submit">
-      </form>
+     <form onsubmit="return false;">
+      <input class="risposta" type = "text">
+      <input class ="answer" type = "submit">
+    </form>
 
 
   </body>

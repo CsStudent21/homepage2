@@ -9,7 +9,6 @@ https://striveschool.herokuapp.com/api/reservation/" */
 
 document.addEventListener("DOMContentLoaded", loadReservations);
 document.addEventListener("DOMContentLoaded", sendReservation);
-document.addEventListener("DOMContentLoaded", Delete);
 
 //GET Function to obtain the list of the reservations
 // Old Functions
@@ -78,15 +77,13 @@ async function sendReservation() {
 }
 
 //DELETE Function to DELETE a post
-function Delete(){
-    document.querySelector("#cancelbook").addEventListener("click", async function() {
-        const id = document.querySelector("#idbook").value;
-        let reservations = await fetch(`https://striveschool.herokuapp.com/api/reservation/${id}`,{
-            method: "DELETE"
-        })
+/*   document.querySelector(".cancelbook").addEventListener("click", async function() {
+            const id = document.querySelector("#idbook").value;
+            let reservations = await fetch(`https://striveschool.herokuapp.com/api/reservation/${id}`,{
+                method: "DELETE",
+            });
 
-    })
-}
+        }); */
 
 // Example
 /*let deleteButton = document.getElementById("cancelbook")
