@@ -74,7 +74,7 @@ async function sendReservation() {
         body: JSON.stringify(myReservation)
     })
 
-   // await loadReservations()
+  // await loadReservations()
 }
 
 //DELETE Function to DELETE a post
@@ -84,17 +84,5 @@ function Delete(){
         let reservations = await fetch(`https://striveschool.herokuapp.com/api/reservation/${id}`,{
             method: "DELETE"
         })
-
-    })
+    });
 }
-
-// Example
-/*let deleteButton = document.getElementById("cancelbook")
-
-            deleteButton.addEventListener("click", async (event) => {
-                const id = document.getElementById("idbook").value
-                let response = await fetch(
-                    `https://striveschool.herokuapp.com/api/reservation/${id}`, {
-                        method: "DELETE"
-                    })
-            }) */
