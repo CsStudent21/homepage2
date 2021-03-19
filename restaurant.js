@@ -32,7 +32,7 @@ async function putReservation() {
         dateTime: document.querySelector("#date").value,
         specialRequests: document.querySelector("#extra").value,
     }
-
+    
     let reservations = await fetch("https://striveschool.herokuapp.com/api/reservation/",{
         method: "POST",
         headers: {
@@ -41,7 +41,7 @@ async function putReservation() {
         body: JSON.stringify(myReservation)
     });
 
-   await getReservations()
+  await getReservations()
 };
 
 //DELETE Function to DELETE a post
@@ -53,5 +53,6 @@ function deleteReservation(){
         })
         document.querySelector(".greenText").style.backgroundColor = "green"
         document.querySelector("#success").innerHTML = "Reservation Cancelled!"
+        await getReservations()
     });
 };
