@@ -39,10 +39,10 @@ async function putReservation() {
             "content-type": "application/json"
         },
         body: JSON.stringify(myReservation)
-    })
+    });
 
    await getReservations()
-}
+};
 
 //DELETE Function to DELETE a post
 function deleteReservation(){
@@ -54,4 +54,4 @@ function deleteReservation(){
         document.querySelector(".greenText").style.backgroundColor = "green"
         document.querySelector("#success").innerHTML = "Reservation Cancelled!"
     });
-}
+};
