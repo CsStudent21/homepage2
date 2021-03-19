@@ -33,3 +33,10 @@ nav {
     border-color: white;
     text-align: center;
   }
+
+  /* Cancel Reservation Form */
+  #cancelform {
+    padding:1rem;
+    border:1px;
+    margin:1rem;
+  }

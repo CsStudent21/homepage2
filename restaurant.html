@@ -110,7 +110,7 @@
         
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="smoker">
-                    <label class="custom-control-label" for="smoker">Fumatore</label>
+                    <label class="custom-control-label" for="smoker">Fumatore</label> &#128684;
                   </div>
         
                 <div class="form-group">
@@ -125,7 +125,7 @@
 
                 <div class="form-group">
                     <button type="button" class="btn btn-outline-info" onclick="sendReservation()">Reserve</button>
-                  </div>
+                </div>
 
               </form>
         </div>
@@ -159,7 +159,16 @@
          <tbody id="reservations"></tbody>
 
        </table>
-
      </div>
+
+     <!--Form to Cancel Reservation-->
+     <div class="container">
+      <form id="cancelform">
+        <input type="text" id="idbook" placeholder="Insert ID Reservation">
+        <input type="submit" class="cancelbook" value="Cancel Reservation">
+      </form>
+     </div>
+
+
   </body>
 </html>
