@@ -131,18 +131,6 @@
         </div>
       </div>
 
-
-     <!-- <button type="button" class="btn btn-outline-info">Info</button> -->
-      <!--Libro prenotazioni-->
-      <!-- 
-        name
-        phone
-        numberOfPersons
-        smoking
-        SpecialRequests
-        _id
-      -->
-
       <!--Table of the Booking list-->
      <div class="container">
        <h2>Libro Prenotazioni</h2>
@@ -162,11 +150,13 @@
      </div>
 
      <!--Form to Cancel Reservation-->
+     <div class="container">
       <form id="cancelform" onsubmit="return false;">
-        <input type="text" id="idbook" placeholder="Insert ID Reservation">
-        <input id="cancelbook" type="submit">
+        <input type="text" id="idbook" class="greenText" placeholder="Insert ID Reservation">
+        <input id="cancelbook" type="submit" value="Cancel Your Reservation"> <h2 id="success"> </h2>
       </form>
-
+      <h3 id="success"> </h3>
+     </div>
 
   </body>
 </html>

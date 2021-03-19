@@ -9,7 +9,7 @@ h1 {
     margin-left: 0.5rem;
 }
 
-/* The the class naming of the blog post taken by bootstrap */
+/* The the class naming of the blog post taken by Bootstrap */
 
 .blog-post{
     padding: 0.5rem;
@@ -17,7 +17,8 @@ h1 {
     margin: 0.5rem;
 }
 
-/* The style of the blog form taken by Trivia exercise and then personalized */
+/* The style of the blog form taken by Trivia of CS50 Lab8 exercise and then personalized: 
+  https://cs50.harvard.edu/x/2021/labs/8/ */
 
 button, input[type="submit"] {
     background-color: #d9edff;
