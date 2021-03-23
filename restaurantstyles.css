@@ -20,6 +20,10 @@ nav {
     object-fit: cover;
   }
 
+  #success {
+    color:limegreen;
+  }
+
   /* Table Style found on https://css-tricks.com/complete-guide-table-element/ */
 
   td, th {

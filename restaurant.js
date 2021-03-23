@@ -7,20 +7,18 @@ document.addEventListener("DOMContentLoaded", putReservation);
 document.addEventListener("DOMContentLoaded", deleteReservation);
 
 // GET Function
-async function getReservations() {
+async function getReservations(){
     let reservations = await fetch("https://striveschool.herokuapp.com/api/reservation/")
-    let resObj = await reservations.json()
-
-    document.querySelector("#reservations").innerHTML += resObj.map(x =>
-          `<tr>
-             <td>${x.name}</td>
-             <td>${x.phone}</td>
-             <td>${x.numberOfPersons}</td>
-             <td>${x.smoking}</td>
-             <td>${x.specialRequests}</td>
-             <td>${x._id}</td>
-           </tr>`).join("")
-    }
+    let reservationsJson = await reservations.json()
+    document.querySelector("#reservations").innerHTML = reservationsJson.map(x => `<tr>
+    <td>${x.name}</td>
+    <td>${x.phone}</td>
+    <td>${x.numberOfPersons}</td>
+    <td>${x.smoking}</td>
+    <td>${x.specialRequests}</td>
+    <td>${x._id}</td>
+  </tr>`).join("")
+}
 
 // POST Function to obtain the list of the reservations
 async function putReservation() {
@@ -49,7 +47,7 @@ function deleteReservation(){
         let reservations = await fetch(`https://striveschool.herokuapp.com/api/reservation/${id}`,{
             method: "DELETE",
         })
-        document.querySelector(".greenText").style.backgroundColor = "green"
+        document.querySelector(".greenText").style.backgroundColor = "lightgreen"
         document.querySelector("#success").innerHTML = "Reservation Cancelled!"
     });
 };
