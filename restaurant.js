@@ -33,12 +33,34 @@ async function putReservation() {
 
     let reservations = await fetch("https://striveschool.herokuapp.com/api/reservation/",{
         method: "POST",
+        headers: new Headers ({
+            "Content-Type": "application/json",
+        }),
+        body: JSON.stringify(myReservation),
+    })
+};
+
+/* OLD POST Function
+async function putReservation() {
+    let myReservation = {
+        name: document.querySelector("#name").value,
+        phone: document.querySelector("#phone").value,
+        numberOfPersons: document.querySelector("#numberOfPersons").value,
+        smoking: document.querySelector("#smoking").checked,
+        dateTime: document.querySelector("#dateTime").value,
+        specialRequests: document.querySelector("#specialRequests").value,
+    }
+
+    let reservations = await fetch("https://striveschool.herokuapp.com/api/reservation/", {
+        method: "POST",
         headers: {
             "content-type": "application/json"
         },
-        body: JSON.stringify(myReservation)
-    });
+        body: JSON.stringify(myReservation),
+    })
+
 };
+*/
 
 //DELETE Function to DELETE a post
 function deleteReservation(){

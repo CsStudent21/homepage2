@@ -5,7 +5,6 @@ https://striveschool.herokuapp.com/api/reservation/ */
 // CALL the Functions
 document.addEventListener("DOMContentLoaded", getReservations);
 document.addEventListener("DOMContentLoaded", postReservation);
-// document.addEventListener("DOMContentLoaded", Color);
 document.addEventListener("DOMContentLoaded", deleteReservation);
 
 // GET Function
@@ -44,15 +43,16 @@ function postReservation(){
             specialRequests:document.querySelector("#specialRequests").value,
         }
 
-        let reservations = await fetch("https://striveschool.herokuapp.com/api/reservation/", {
+        await fetch("https://striveschool.herokuapp.com/api/reservation/", {
             method: "POST",
-            header: {
+            headers: new Headers ({
                 "Content-Type": "application/json",
-            },
+            }),
             body: JSON.stringify(myReservation),
         })
 
         Color();
+        document.querySelector("#postSuccess").innerHTML = "Table Reserved!"
     });
 };
 
@@ -86,7 +86,7 @@ function deleteReservation(){
             method: "DELETE",
         })
         document.querySelector(".greenText").style.backgroundColor = "lightgreen"
-        document.querySelector("#success").innerHTML = "Reservation Cancelled!"
+        document.querySelector("#deleteSuccess").innerHTML = "Reservation Cancelled!"
     });
 };
 
