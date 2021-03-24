@@ -4,7 +4,8 @@ https://striveschool.herokuapp.com/api/reservation/ */
 
 // CALL the Functions
 document.addEventListener("DOMContentLoaded", getReservations);
-document.addEventListener("DOMContentLoaded", Color);
+document.addEventListener("DOMContentLoaded", postReservation);
+// document.addEventListener("DOMContentLoaded", Color);
 document.addEventListener("DOMContentLoaded", deleteReservation);
 
 // GET Function
@@ -21,8 +22,40 @@ async function getReservations(){
   </tr>`).join("")
 };
 
+// Function Color
+
+function Color(){
+    let colorTextForm = document.querySelectorAll(".form-control");
+    for(let i = 0; i < colorTextForm.length; i++){
+        colorTextForm[i].style.backgroundColor = "limegreen";
+    }
+};
 
 // POST Function to obtain the list of the reservations
+
+function postReservation(){
+    document.querySelector("#postReservation").addEventListener("click", async function() {
+        let myReservation = {
+            name:document.querySelector("#name").value,
+            phone:document.querySelector("#phone").value,
+            numberOfPersons:document.querySelector("#numberOfPersons").value,
+            smoking:document.querySelector("#smoking").checked,
+            dateTime:document.querySelector("#dateTime").value,
+            specialRequests:document.querySelector("#specialRequests").value,
+        }
+
+        let reservations = await fetch("https://striveschool.herokuapp.com/api/reservation/", {
+            method: "POST",
+            header: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(myReservation),
+        })
+
+        Color();
+    });
+};
+
 
 /* async function putReservation() {
     let myReservation = {
@@ -39,20 +72,11 @@ async function getReservations(){
         headers: {
             "content-type": "application/json"
         },
-        body: JSON.stringify(myReservation)
+        body: JSON.stringify(myReservation),
     })
 
 };
 */
-
-// Function Color
-
-function Color(){
-    let colorTextForm = document.querySelectorAll(".form-control");
-    for(let i = 0; i < colorTextForm.length; i++){
-        colorTextForm[i].style.backgroundColor = "limegreen";
-    }
-};
 
 //DELETE Function to DELETE a post
 function deleteReservation(){
@@ -68,5 +92,3 @@ function deleteReservation(){
 
 
 
-
-document.addEventListener("DOMContentLoaded", putReservation);
