@@ -91,36 +91,40 @@
 
       <!-- POST Reservations Form -->
       <div class="container">
+        <h2>Reserve Your Table</h2>
         <form>
           <div class="form-group">
-            <input name="name" type="text" class="form-control">
+            <input name="name" type="text" class="form-control green" id="name">
           </div>
           <div class="form-group">
-            <input name="phone" type="text" class="form-control">
+            <input name="phone" type="text" class="form-control green" id="phone">
           </div>
           <div class="form-group">
-            <input name="numberOfPersons" type="number" class="form-control">
+            <input name="numberOfPersons" type="number" class="form-control green" id="numberOfPersons">
           </div>
-          <div class="form-group">
-            <input name="smoking" type="checkbox">
-          </div>
-          <div class="form-group">
-            <input name="date" type="datetime-local" class="form-control">
-          </div>
-          <textarea name="specialRequests" type="text"rows="3" class="form-control"> 
-          </textarea>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+            <input type="checkbox" class="custom-control-input" id="smoking">
+            <label class="custom-control-label" for="smoking"> Smoking </label> &#128684;
           </div>
           <div class="form-group">
-            <input type="submit" value="Reserve your table">
+            <input name="date" type="datetime-local" class="form-control" id="dateTime">
           </div>
-      </form>
+          <div class="form-group">
+            <label for="specialRequests">Example textarea</label>
+            <textarea class="form-control" id="specialRequests" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Reserve your table" id="postReservation">
+          </div>
+          <p>
+            <!-- Feedback-->
+          </p>
+        </form>
       </div>
 
       <!-- GET CODE AREA: Table of the Booking list-->
       <div class="container">
+      <h2>Reservations Book</h2>
         <table>
           <thead>
             <tr>

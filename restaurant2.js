@@ -3,7 +3,9 @@ https://striveschool.herokuapp.com/api/reservation/ */
 
 
 // CALL the Functions
-document.addEventListener("DOMContentLoaded", getReservations)
+document.addEventListener("DOMContentLoaded", getReservations);
+document.addEventListener("DOMContentLoaded", Color);
+document.addEventListener("DOMContentLoaded", deleteReservation);
 
 // GET Function
 async function getReservations(){
@@ -21,14 +23,15 @@ async function getReservations(){
 
 
 // POST Function to obtain the list of the reservations
-async function putReservation() {
+
+/* async function putReservation() {
     let myReservation = {
         name: document.querySelector("#name").value,
         phone: document.querySelector("#phone").value,
-        numberOfPersons: document.querySelector("#people").value,
-        smoking: document.querySelector("#smoker").checked,
-        dateTime: document.querySelector("#date").value,
-        specialRequests: document.querySelector("#extra").value,
+        numberOfPersons: document.querySelector("#numberOfPersons").value,
+        smoking: document.querySelector("#smoking").checked,
+        dateTime: document.querySelector("#dateTime").value,
+        specialRequests: document.querySelector("#specialRequests").value,
     }
 
     let reservations = await fetch("https://striveschool.herokuapp.com/api/reservation/", {
@@ -38,13 +41,24 @@ async function putReservation() {
         },
         body: JSON.stringify(myReservation)
     })
+
+};
+*/
+
+// Function Color
+
+function Color(){
+    let colorTextForm = document.querySelectorAll(".form-control");
+    for(let i = 0; i < colorTextForm.length; i++){
+        colorTextForm[i].style.backgroundColor = "limegreen";
+    }
 };
 
 //DELETE Function to DELETE a post
 function deleteReservation(){
     document.querySelector("#cancelbook").addEventListener("click", async function() {
-        const id = document.querySelector("#idbook").value;
-        let reservations = await fetch(`https://striveschool.herokuapp.com/api/reservation/${id}`,{
+        const _id = document.querySelector("#idbook").value;
+        let reservations = await fetch(`https://striveschool.herokuapp.com/api/reservation/${_id}`,{
             method: "DELETE",
         })
         document.querySelector(".greenText").style.backgroundColor = "lightgreen"
@@ -56,4 +70,3 @@ function deleteReservation(){
 
 
 document.addEventListener("DOMContentLoaded", putReservation);
-document.addEventListener("DOMContentLoaded", deleteReservation);
