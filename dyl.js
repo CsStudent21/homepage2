@@ -14,8 +14,6 @@ function loadDTbooks(){
     }
 };
 
-
-
 let DTbooks = [
     {
         "img" : "dyl/DT1.jpg",
