@@ -89,65 +89,58 @@
         <a class="btn btn-primary btn-lg" href="https://sushimilan.com" role="button">Read my Blog</a>
       </div>
 
-      <!-- My Form -->
+      <!-- POST Reservations Form -->
       <div class="container">
-        <div class="col-sm-3">
-            <form>
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Name">
-                </div>
-        
-                <div class="form-group">
-                  <label for="phone">Phone</label>
-                  <input type="text" class="form-control" id="phone" placeholder="Phone">
-                </div>
-        
-                <div class="form-group">
-                    <label for="people">Number of persons</label>
-                    <input type="number" class="form-control" id="people" placeholder="">
-                  </div>
-        
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="smoker">
-                    <label class="custom-control-label" for="smoker">Fumatore</label>&#128684;
-                </div>
-        
-                <div class="form-group">
-                    <label for="date">Date</label>
-                    <input type="datetime-local" id="date">
-                </div>
-               
-                <div class="form-group">
-                  <label for="extra">Special Requests</label>
-                  <textarea class="form-control" id="extra" rows="3"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <button type="button" class="btn btn-outline-info" onclick="putReservation()">Reserve</button>
-                </div>
-              </form>
-        </div>
-        <h2 id="tableSuccess"></h2>
+        <h2>Reserve Your Table</h2>
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <input name="name" type="text" class="form-control green" id="name">
+          </div>
+          <div class="form-group">
+            <input name="phone" type="text" class="form-control green" id="phone">
+          </div>
+          <div class="form-group">
+            <input name="numberOfPersons" type="number" class="form-control green" id="numberOfPersons">
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="smoking">
+            <label class="custom-control-label" for="smoking"> Smoking </label> &#128684;
+          </div>
+          <div class="form-group">
+            <input name="date" type="datetime-local" class="form-control" id="dateTime">
+          </div>
+          <div class="form-group">
+            <label for="specialRequests">Example textarea</label>
+            <textarea class="form-control" id="specialRequests" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <input  id="postReservation" type="submit" value="Reserve your table">
+          </div>
+          <p id="postSuccess"> </p>
+        </form>
       </div>
 
-      <!--Table of the Booking list-->
-     <div class="container">
-       <h2>Libro Prenotazioni</h2>
-       <table>
-         <tr>
-           <th>Name</th>
-           <th>Phone</th>
-           <th>Number of Persons</th>
-           <th>Smoking</th>
-           <th>Special Requests</th>
-           <th>ID Booking</th>
-         </tr>
-         <!-- List of Reservations-->
-         <tbody id="reservations"></tbody>
+      <!-- GET CODE AREA: Table of the Booking list-->
+      <div class="container">
+      <h2>Reservations Book</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Number of People</th>
+              <th>Smoking</th>
+              <th>Special Requests</th>
+              <th>ID Booking</th>
+            </tr>
+          </thead>
+          <tbody id="reservationsBook">
+            <!-- Here appears the Reservations Book-->
+            
+          </tbody>
+        </table>
 
-       </table>
-     </div>
+      </div>
 
      <!--Form to Cancel Reservation-->
      <div class="container">
@@ -155,7 +148,7 @@
         <input type="text" id="idbook" class="greenText" placeholder="Insert ID Reservation">
         <input id="cancelbook" type="submit" value="Cancel Your Reservation">
       </form>
-      <h3 id="success"> </h3>
+      <p id="deleteSuccess"> </p>
      </div>
 
   </body>
