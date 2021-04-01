@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Standard Head -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link href="restaurantstyles.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <script src="restaurant2.js"></script>
+
+    <title>My restaurant</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img id = "logo" src="Bluelogo.jpg" width="30" height="30" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="ccbooks.html">Clayton Christensen's Books</a>
+            <a class="nav-item nav-link" href="core.html">CORe</a>
+            <a class="nav-item nav-link" href="dyl.html">DYL</a>
+            <a class="nav-item nav-link" href="restaurant.html"> My Restaurant</a>
+          </div>
+        </div>
+      </nav>
+
+       <!-- Breadcrumb  -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">My Restaurant</li>
+        </ol>
+      </nav>
+
+      <!-- Carousel -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Rphotos/R1.jpg" class="d-block w-100" alt="Osteria Francescana">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Osteria Francescana</h5>
+              <p>Yellow is bello</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Rphotos/R2.jpg" class="d-block w-100" alt="The Araki Sushi Bar">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>The Araki</h5>
+              <p>The Sushi Bar</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Rphotos/R3.jpg" class="d-block w-100" alt="Arpegè Paris">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Arpège</h5>
+              <p>Coquilles Saint-Jaques de Port-en-Bessin flueries au gèranium</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- Jumbtron -->
+      <div class="jumbotron">
+        <h1 class="display-4">My restaurant</h1>
+        <p class="lead">My restaurant, the entrance to the best restaurants in the world.</p>
+        <hr class="my-4">
+        <p>The restaurant has been ispired by my blog "Sushi Milan", where I have reviewed the best restaurants in the world. </p>
+        <a class="btn btn-primary btn-lg" href="https://sushimilan.com" role="button">Read my Blog</a>
+      </div>
+
+      <!-- POST Reservations Form -->
+      <div class="container specialContainer">
+        <h2>Reserve Your Table</h2>
+        <form onsubmit="pizza(); return false;">
+          <div class="form-group">
+            <input autocomplete="off" autofocus placeholder="Name" name="name" type="text" class="form-control green" id="name">
+          </div>
+          <div class="form-group">
+            <input placeholder="Phone Number" name="phone" type="text" class="form-control green" id="phone">
+          </div>
+          <div class="form-group">
+            <input placeholder="Number of Guests" name="numberOfPersons" type="number" class="form-control green" id="numberOfPersons">
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="smoking">
+            <label class="custom-control-label" for="smoking"> Smoking </label> &#128684;
+          </div>
+          <div class="form-group">
+            <input name="date" type="datetime-local" class="form-control" id="dateTime">
+          </div>
+          <div class="form-group">
+            <label for="specialRequests">Special Requests</label>
+            <textarea class="form-control" id="specialRequests" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <input id="postReservation" type="submit" value="Reserve your table">
+          </div>
+          <p id="postSuccess"> </p>
+        </form>
+      </div>
+
+      <!-- GET CODE AREA: Table of the Booking list-->
+      <div class="container">
+      <h2>Reservations Book</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Number of People</th>
+              <th>Smoking</th>
+              <th>Special Requests</th>
+              <th>ID Booking</th>
+            </tr>
+          </thead>
+          <tbody id="reservationsBook">
+            <!-- Here appears the Reservations Book-->
+            
+          </tbody>
+        </table>
+
+      </div>
+
+     <!--Form to Cancel Reservation-->
+     <div class="container">
+      <form id="cancelform" onsubmit="deleteReservation(); return false;">
+        <input type="text" id="idbook" class="greenText" placeholder="Insert ID Reservation">
+        <input id="cancelbook" type="submit" value="Cancel Your Reservation">
+        <p id="deleteSuccess"> </p>
+      </form>
+     </div>
+
+  </body>
+</html>
