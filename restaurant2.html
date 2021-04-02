@@ -92,7 +92,7 @@
       <!-- POST Reservations Form -->
       <div class="container specialContainer">
         <h2>Reserve Your Table</h2>
-        <form onsubmit="postReservation(); return false;">
+        <form onsubmit="postReservation();">
           <div class="form-group">
             <input autocomplete="off" autofocus placeholder="Name" name="name" type="text" class="form-control green" id="name">
           </div>
@@ -113,9 +113,7 @@
             <label for="specialRequests">Special Requests</label>
             <textarea class="form-control" id="specialRequests" rows="3"></textarea>
           </div>
-          <div class="form-group">
-            <input id="postReservation" type="submit" value="Reserve your table">
-          </div>
+            <input id="reservebook" type="submit" value="Reserve your table">
           <p id="postSuccess"> </p>
         </form>
       </div>
