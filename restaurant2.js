@@ -32,7 +32,7 @@ async function getReservations(){
 }; */
 
 // POST Function to make a new reservation
-function postReservation(){
+async function postReservation(){
     // Define Variable of the New Reservation
     let myReservation = {
         name:document.querySelector("#name").value,
@@ -44,7 +44,7 @@ function postReservation(){
     }
 
     // POST Method for the New Reservation
-    fetch("https://striveschool.herokuapp.com/api/reservation/", {
+    await fetch("https://striveschool.herokuapp.com/api/reservation/", {
             method: "POST",
             body: JSON.stringify(myReservation),
             headers: {"Content-Type": "application/json",}
